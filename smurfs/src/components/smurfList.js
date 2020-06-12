@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import Loader from 'react-loader-spinner';
+import Smurf from 'react-loader-spinner';
 
-import { fetchQuote } from '../store/actions/quoteActions';
+import { fetchSmurf } from '../store/actions/getAction.js';
 
 const Quote = props => {
   useEffect(() => {
     // call an action creator
-    props.fetchQuote();
+    props.fetchSmurf();
   }, []);
 
   // if (props.isFetching) {
@@ -16,9 +16,9 @@ const Quote = props => {
 
   return (
     <div>
-      <h1>Kanye Quotes 🎙</h1>
+      <h1>Smurf</h1>
       {props.isFetching && (
-        <Loader type="Puff" color="#00BFFF" height={100} width={100} />
+        <Smurf type="Puff" color="#00BFFF" height={100} width={100} />
       )}
       {props.quote && <h3>"{props.quote}"</h3>}
       {props.error && <p className="error">{props.error}</p>}
