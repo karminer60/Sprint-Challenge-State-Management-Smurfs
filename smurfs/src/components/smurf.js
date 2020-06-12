@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { fetchSmurf } from '../store/actions/getAction.js';
 
@@ -11,6 +11,8 @@ const Smurf = props => {
     return (
         <div>
             <p>{props.item.name}</p>
+            <p>{props.item.age}</p>
+            <p>{props.item.height}</p>
         </div>
     );
 };

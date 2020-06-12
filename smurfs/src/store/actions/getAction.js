@@ -7,24 +7,24 @@ export const FETCH_QUOTE_FAILURE = 'FETCH_QUOTE_FAILURE';
 // we need to perform an async operation
 export const fetchSmurf = () => {
   return dispatch => {
-    dispatch({ type: 'FETCH_QUOTE_START' });
+    dispatch({ type: 'FETCH_SMURF_START' });
     axios
       .get('http://localhost:3333/smurfs')
       .then(res => {
         // res.data.quote
-        dispatch({ type: 'FETCH_QUOTE_SUCCESS', payload: res.data.quote });
+        dispatch({ type: 'FETCH_SMURF_SUCCESS', payload: res.data.smurf });
       })
       .catch(err => {
         // message: err.response.data
         // status: err.response.status
         dispatch({
-          type: 'FETCH_QUOTE_FAILURE',
+          type: 'FETCH_SMURF_FAILURE',
           payload: `Error ${err.response.status}: ${err.response.data}`
         });
       });
   };
 };
 
-export const fetchSmurf = state => {
-  return {};
-};
+//export const fetchSmurf = state => {
+  //return {};
+//};
