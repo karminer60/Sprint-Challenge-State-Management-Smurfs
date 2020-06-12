@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 
 
-const ContactForm = () => {
+const SmurfForm = () => {
     const [data, setData] = useState();
     const { register, errors, handleSubmit } = useForm({
       mode: "onBlur",
@@ -62,5 +62,15 @@ const ContactForm = () => {
     );
   };
   
-  export default ContactForm;
+  const mapStateToProps = state => {
+    console.log(state);
+    return {
+      
+    };
+  };
+  
+  export default connect(
+    mapStateToProps,
+    {}
+  )(SmurfForm);
   
