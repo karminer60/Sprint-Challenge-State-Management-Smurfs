@@ -25,10 +25,10 @@ const SmurfForm = (props) => {
 
 
   return (
-    <div className="App">
+    <div className="smurf-form">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name">Name*&nbsp;</label>
           <input
             id="name"
             name="name"
@@ -40,8 +40,10 @@ const SmurfForm = (props) => {
           )}
         </div>
 
+        <br/>
+
         <div>
-          <label htmlFor="age">Age*</label>
+          <label htmlFor="age">Age*&nbsp;</label>
           <input
             id="age"
             name="age"
@@ -52,9 +54,11 @@ const SmurfForm = (props) => {
             <p>Looks like there was an error: {errors.age.type}</p>
           )}
         </div>
+        
+        <br/>
 
         <div>
-          <label htmlFor="height">Height*</label>
+          <label htmlFor="height">Height*&nbsp;</label>
           <input
             id="height"
             name="height"
@@ -67,7 +71,7 @@ const SmurfForm = (props) => {
         </div>
 
 
-
+        <br/>
 
         <input value="submit" type="submit" />
       </form>
