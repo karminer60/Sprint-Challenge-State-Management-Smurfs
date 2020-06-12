@@ -7,6 +7,7 @@ import SmurfForm from './components/smurfForm.js'
 export default function App() {
   return (
     <div className="App">
+      <h1>Smurf Village</h1>
       <SmurfList/>
       <SmurfForm/>
     </div>
