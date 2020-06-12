@@ -12,6 +12,7 @@ export const fetchSmurf = () => {
       .get('http://localhost:3333/smurfs')
       .then(res => {
         // res.data.quote
+        console.log(res.data)
         dispatch({ type: 'FETCH_SMURF_SUCCESS', payload: res.data });
       })
       .catch(err => {
