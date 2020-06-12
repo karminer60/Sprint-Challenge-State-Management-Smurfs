@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import { fetchSmurf } from '../store/actions/getAction.js';
+
 
 
 const Smurf = props => {
-    useEffect(() => {
-        // call an action creator
-        props.fetchSmurf();
-    }, []);
+   
     return (
         <div>
-            <p>{props.item.name}</p>
-            <p>{props.item.age}</p>
-            <p>{props.item.height}</p>
+            <p>{props.smurf.name}</p>
+            <p>{props.smurf.age}</p>
+            <p>{props.smurf.height}</p>
         </div>
     );
 };
+
+
 
 export default Smurf;

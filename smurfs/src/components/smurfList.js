@@ -5,16 +5,16 @@ import Smurf from './smurf.js';
 import { fetchSmurf } from '../store/actions/getAction.js';
 
 const SmurfList = props => {
+    useEffect(() => {
+        
+        props.fetchSmurf();
+      }, []);
+
   
-
-  // if (props.isFetching) {
-  //   return <Loader />;
-  // }
-
   return (
     <div className="smurf-list">
-      {props.thingsToDo.map(item => (
-        <Smurf key={item.id} item={item} dispatch={props.dispatch} />
+      {props.smurfList.map(item => (
+        <Smurf key={item.id} smurf = {item} />
       ))}
       
 
@@ -25,7 +25,7 @@ const SmurfList = props => {
 const mapStateToProps = state => {
   console.log(state);
   return {
-    
+    smurfList: state.smurfList
   };
 };
 
