@@ -25,6 +25,6 @@ export const fetchSmurf = () => {
   };
 };
 
-//export const fetchSmurf = state => {
-  //return {};
-//};
+export const newSmurf = state => {
+  return {};
+};

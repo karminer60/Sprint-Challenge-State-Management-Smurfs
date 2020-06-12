@@ -12,7 +12,7 @@ const SmurfList = props => {
   // }
 
   return (
-    <div className="toDo-list">
+    <div className="smurf-list">
       {props.thingsToDo.map(item => (
         <Smurf key={item.id} item={item} dispatch={props.dispatch} />
       ))}

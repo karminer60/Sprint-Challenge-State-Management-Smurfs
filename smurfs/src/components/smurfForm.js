@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import {useForm} from '../hooks/useForm.js';
 
 
 const SmurfForm = () => {

@@ -1,7 +1,9 @@
 const initialState = {
     name: '',
     age: '',
-    height: ''
+    height: '',
+    isFetching: false,
+    error:''
   };
   
   export const smurfReducer = (state = initialState, action) => {
@@ -10,6 +12,7 @@ const initialState = {
         return {
           ...state,
           isFetching: true
+
         };
       case 'FETCH_QUOTE_SUCCESS':
         return {
