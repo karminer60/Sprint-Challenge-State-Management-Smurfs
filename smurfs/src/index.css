@@ -7,7 +7,8 @@ body {
 .smurf-list{
   
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-wrap:wrap;
 }
 
 .smurf-form{
