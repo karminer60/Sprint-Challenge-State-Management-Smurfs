@@ -1,5 +1,29 @@
 body {
-  margin: 0;
+  margin:0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.smurf-list{
+  
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+}
+
+.smurf-form{
+  margin-left:700px;
+  margin-top:20px;
+}
+
+
+.smurf{
+  width: 200px;
+  text-align: center;
+  background-color: aquamarine;
+  margin: 10px;
+}
+
+h1{
+  text-align: center;
 }
